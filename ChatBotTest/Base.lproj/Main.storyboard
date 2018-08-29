@@ -50,6 +50,14 @@
                                     <segue destination="z0l-a3-T5L" kind="show" id="LhZ-ka-m5w"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5of-iX-OQf">
+                                <rect key="frame" x="0.0" y="424" width="375" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="课表"/>
+                                <connections>
+                                    <segue destination="gnG-XL-4V0" kind="show" id="caO-Td-yW7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -107,6 +115,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEj-eT-5Wg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8.8000000000000007" y="-48.125937031484263"/>
+        </scene>
+        <!--课表-->
+        <scene sceneID="VlO-7F-qVY">
+            <objects>
+                <viewController title="课表" id="gnG-XL-4V0" customClass="WYCClassBookViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ytg-YJ-TTC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rL5-26-xfj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rL5-26-xfj" firstAttribute="top" secondItem="hsc-U7-8wa" secondAttribute="top" id="Beq-8G-lr7"/>
+                            <constraint firstItem="rL5-26-xfj" firstAttribute="bottom" secondItem="hsc-U7-8wa" secondAttribute="bottom" id="FSu-0u-9du"/>
+                            <constraint firstAttribute="trailing" secondItem="rL5-26-xfj" secondAttribute="trailing" id="Jn8-uU-P5c"/>
+                            <constraint firstItem="rL5-26-xfj" firstAttribute="leading" secondItem="Ytg-YJ-TTC" secondAttribute="leading" id="wdg-dV-RcS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hsc-U7-8wa"/>
+                    </view>
+                    <connections>
+                        <outlet property="rootView" destination="rL5-26-xfj" id="rMk-M4-fgI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mmc-IQ-sbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-962.39999999999998" y="839.73013493253382"/>
         </scene>
         <!--Chat Bot View Controller-->
         <scene sceneID="LUc-At-PcF">

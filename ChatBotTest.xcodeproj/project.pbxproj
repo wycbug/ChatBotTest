@@ -30,13 +30,15 @@
 		D0C7073121363B9C00CD3EDA /* ChatBotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7073021363B9C00CD3EDA /* ChatBotModel.m */; };
 		D0C7073521363E5A00CD3EDA /* WYCChatBotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7073321363E5A00CD3EDA /* WYCChatBotViewController.m */; };
 		D0C70737213698A900CD3EDA /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7072021359B0100CD3EDA /* iflyMSC.framework */; };
+		D0C7073F2136C22C00CD3EDA /* ClassBook.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7073E2136C22C00CD3EDA /* ClassBook.m */; };
+		D0C707422136E46D00CD3EDA /* WYCClassBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C707412136E46D00CD3EDA /* WYCClassBookViewController.m */; };
+		D0C707452136F2AB00CD3EDA /* WYCClassBookView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C707442136F2AB00CD3EDA /* WYCClassBookView.m */; };
+		D0C707712137438F00CD3EDA /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C707702137438F00CD3EDA /* UIColor+Hex.m */; };
 		DB375DE1D0AAF33209A46FBC /* libPods-ChatBotTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4209C666391402419E47232B /* libPods-ChatBotTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		07EA56CA43151E039B589844 /* Pods-XunFeAPITest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XunFeAPITest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XunFeAPITest/Pods-XunFeAPITest.debug.xcconfig"; sourceTree = "<group>"; };
 		4209C666391402419E47232B /* libPods-ChatBotTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatBotTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D41B2E443F68C1CBE2FC95B /* Pods-XunFeAPITest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XunFeAPITest.release.xcconfig"; path = "Pods/Target Support Files/Pods-XunFeAPITest/Pods-XunFeAPITest.release.xcconfig"; sourceTree = "<group>"; };
 		A65B394B038B2ED7458D1065 /* Pods-ChatBotTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatBotTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatBotTest/Pods-ChatBotTest.release.xcconfig"; sourceTree = "<group>"; };
 		D0C706EE213598F000CD3EDA /* ChatBotTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBotTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C706F1213598F000CD3EDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 		D0C7073021363B9C00CD3EDA /* ChatBotModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatBotModel.m; sourceTree = "<group>"; };
 		D0C7073221363E5A00CD3EDA /* WYCChatBotViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYCChatBotViewController.h; sourceTree = "<group>"; };
 		D0C7073321363E5A00CD3EDA /* WYCChatBotViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYCChatBotViewController.m; sourceTree = "<group>"; };
+		D0C7073D2136C22C00CD3EDA /* ClassBook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassBook.h; sourceTree = "<group>"; };
+		D0C7073E2136C22C00CD3EDA /* ClassBook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassBook.m; sourceTree = "<group>"; };
+		D0C707402136E46D00CD3EDA /* WYCClassBookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYCClassBookViewController.h; sourceTree = "<group>"; };
+		D0C707412136E46D00CD3EDA /* WYCClassBookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYCClassBookViewController.m; sourceTree = "<group>"; };
+		D0C707432136F2AB00CD3EDA /* WYCClassBookView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYCClassBookView.h; sourceTree = "<group>"; };
+		D0C707442136F2AB00CD3EDA /* WYCClassBookView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYCClassBookView.m; sourceTree = "<group>"; };
+		D0C7076F2137438F00CD3EDA /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		D0C707702137438F00CD3EDA /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		FE15F11F9270F74B48D86ACE /* Pods-ChatBotTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatBotTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatBotTest/Pods-ChatBotTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,8 +111,6 @@
 		0E608D5DE7F03C4E649E9196 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				07EA56CA43151E039B589844 /* Pods-XunFeAPITest.debug.xcconfig */,
-				5D41B2E443F68C1CBE2FC95B /* Pods-XunFeAPITest.release.xcconfig */,
 				FE15F11F9270F74B48D86ACE /* Pods-ChatBotTest.debug.xcconfig */,
 				A65B394B038B2ED7458D1065 /* Pods-ChatBotTest.release.xcconfig */,
 			);
@@ -130,6 +138,7 @@
 		D0C706F0213598F000CD3EDA /* ChatBotTest */ = {
 			isa = PBXGroup;
 			children = (
+				D0C7076E2137436500CD3EDA /* Categories */,
 				D0C7072B21363B7400CD3EDA /* NetWork */,
 				D0C706F1213598F000CD3EDA /* AppDelegate.h */,
 				D0C706F2213598F000CD3EDA /* AppDelegate.m */,
@@ -149,6 +158,12 @@
 				D0C7073021363B9C00CD3EDA /* ChatBotModel.m */,
 				D0C7073221363E5A00CD3EDA /* WYCChatBotViewController.h */,
 				D0C7073321363E5A00CD3EDA /* WYCChatBotViewController.m */,
+				D0C7073D2136C22C00CD3EDA /* ClassBook.h */,
+				D0C7073E2136C22C00CD3EDA /* ClassBook.m */,
+				D0C707402136E46D00CD3EDA /* WYCClassBookViewController.h */,
+				D0C707412136E46D00CD3EDA /* WYCClassBookViewController.m */,
+				D0C707432136F2AB00CD3EDA /* WYCClassBookView.h */,
+				D0C707442136F2AB00CD3EDA /* WYCClassBookView.m */,
 			);
 			path = ChatBotTest;
 			sourceTree = "<group>";
@@ -180,6 +195,15 @@
 				D0C7072D21363B7400CD3EDA /* HttpClient.h */,
 			);
 			path = NetWork;
+			sourceTree = "<group>";
+		};
+		D0C7076E2137436500CD3EDA /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D0C7076F2137438F00CD3EDA /* UIColor+Hex.h */,
+				D0C707702137438F00CD3EDA /* UIColor+Hex.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,11 +299,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0C7072E21363B7400CD3EDA /* HttpClient.m in Sources */,
+				D0C707712137438F00CD3EDA /* UIColor+Hex.m in Sources */,
+				D0C707452136F2AB00CD3EDA /* WYCClassBookView.m in Sources */,
 				D0C7073521363E5A00CD3EDA /* WYCChatBotViewController.m in Sources */,
 				D0C7073121363B9C00CD3EDA /* ChatBotModel.m in Sources */,
 				D0C7072A2136291200CD3EDA /* WYCISRDataHelper.m in Sources */,
+				D0C707422136E46D00CD3EDA /* WYCClassBookViewController.m in Sources */,
 				D0C706F6213598F000CD3EDA /* ViewController.m in Sources */,
 				D0C707262136234F00CD3EDA /* WYCIATViewController.m in Sources */,
+				D0C7073F2136C22C00CD3EDA /* ClassBook.m in Sources */,
 				D0C70701213598F100CD3EDA /* main.m in Sources */,
 				D0C706F3213598F000CD3EDA /* AppDelegate.m in Sources */,
 			);
@@ -436,7 +464,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wyc.XunFeAPITest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wyc.ChatBotTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -461,7 +489,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.wyc.XunFeAPITest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wyc.ChatBotTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
