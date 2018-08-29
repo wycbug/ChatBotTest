@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0C706F3213598F000CD3EDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C706F2213598F000CD3EDA /* AppDelegate.m */; };
+		D0C706F6213598F000CD3EDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C706F5213598F000CD3EDA /* ViewController.m */; };
+		D0C706F9213598F000CD3EDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C706F7213598F000CD3EDA /* Main.storyboard */; };
+		D0C706FB213598F100CD3EDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C706FA213598F100CD3EDA /* Assets.xcassets */; };
+		D0C706FE213598F100CD3EDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C706FC213598F100CD3EDA /* LaunchScreen.storyboard */; };
+		D0C70701213598F100CD3EDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C70700213598F100CD3EDA /* main.m */; };
+		D0C7070B2135997700CD3EDA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7070A2135997700CD3EDA /* AVFoundation.framework */; };
+		D0C7070D2135997F00CD3EDA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7070C2135997E00CD3EDA /* SystemConfiguration.framework */; };
+		D0C7070F2135998F00CD3EDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7070E2135998E00CD3EDA /* Foundation.framework */; };
+		D0C70711213599A600CD3EDA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C70710213599A600CD3EDA /* AudioToolbox.framework */; };
+		D0C70713213599AE00CD3EDA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C70712213599AE00CD3EDA /* CoreTelephony.framework */; };
+		D0C70715213599B800CD3EDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C70714213599B800CD3EDA /* UIKit.framework */; };
+		D0C70717213599C900CD3EDA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C70716213599C900CD3EDA /* QuartzCore.framework */; };
+		D0C70719213599D000CD3EDA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C70718213599D000CD3EDA /* CoreGraphics.framework */; };
+		D0C7071B213599E600CD3EDA /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7071A213599E600CD3EDA /* libc++.tbd */; };
+		D0C7071D213599FB00CD3EDA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7071C213599FA00CD3EDA /* libz.tbd */; };
+		D0C7071F21359A1100CD3EDA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7071E21359A1100CD3EDA /* CoreLocation.framework */; };
+		D0C707262136234F00CD3EDA /* WYCIATViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C707242136234F00CD3EDA /* WYCIATViewController.m */; };
+		D0C7072A2136291200CD3EDA /* WYCISRDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C707292136291200CD3EDA /* WYCISRDataHelper.m */; };
+		D0C7072E21363B7400CD3EDA /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7072C21363B7400CD3EDA /* HttpClient.m */; };
+		D0C7073121363B9C00CD3EDA /* ChatBotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7073021363B9C00CD3EDA /* ChatBotModel.m */; };
+		D0C7073521363E5A00CD3EDA /* WYCChatBotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7073321363E5A00CD3EDA /* WYCChatBotViewController.m */; };
+		D0C70737213698A900CD3EDA /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0C7072021359B0100CD3EDA /* iflyMSC.framework */; };
+		DB375DE1D0AAF33209A46FBC /* libPods-ChatBotTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4209C666391402419E47232B /* libPods-ChatBotTest.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		07EA56CA43151E039B589844 /* Pods-XunFeAPITest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XunFeAPITest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XunFeAPITest/Pods-XunFeAPITest.debug.xcconfig"; sourceTree = "<group>"; };
+		4209C666391402419E47232B /* libPods-ChatBotTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ChatBotTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D41B2E443F68C1CBE2FC95B /* Pods-XunFeAPITest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XunFeAPITest.release.xcconfig"; path = "Pods/Target Support Files/Pods-XunFeAPITest/Pods-XunFeAPITest.release.xcconfig"; sourceTree = "<group>"; };
+		A65B394B038B2ED7458D1065 /* Pods-ChatBotTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatBotTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatBotTest/Pods-ChatBotTest.release.xcconfig"; sourceTree = "<group>"; };
+		D0C706EE213598F000CD3EDA /* ChatBotTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatBotTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C706F1213598F000CD3EDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0C706F2213598F000CD3EDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0C706F4213598F000CD3EDA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D0C706F5213598F000CD3EDA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D0C706F8213598F000CD3EDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0C706FA213598F100CD3EDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0C706FD213598F100CD3EDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D0C706FF213598F100CD3EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0C70700213598F100CD3EDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0C7070A2135997700CD3EDA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D0C7070C2135997E00CD3EDA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D0C7070E2135998E00CD3EDA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D0C70710213599A600CD3EDA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		D0C70712213599AE00CD3EDA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D0C70714213599B800CD3EDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D0C70716213599C900CD3EDA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D0C70718213599D000CD3EDA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D0C7071A213599E600CD3EDA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		D0C7071C213599FA00CD3EDA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D0C7071E21359A1100CD3EDA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D0C7072021359B0100CD3EDA /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iflyMSC.framework; path = ChatBotTest/iflyMSC.framework; sourceTree = "<group>"; };
+		D0C7072221359C8900CD3EDA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		D0C707232136234F00CD3EDA /* WYCIATViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYCIATViewController.h; sourceTree = "<group>"; };
+		D0C707242136234F00CD3EDA /* WYCIATViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYCIATViewController.m; sourceTree = "<group>"; };
+		D0C707282136291200CD3EDA /* WYCISRDataHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYCISRDataHelper.h; sourceTree = "<group>"; };
+		D0C707292136291200CD3EDA /* WYCISRDataHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYCISRDataHelper.m; sourceTree = "<group>"; };
+		D0C7072C21363B7400CD3EDA /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
+		D0C7072D21363B7400CD3EDA /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		D0C7072F21363B9C00CD3EDA /* ChatBotModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatBotModel.h; sourceTree = "<group>"; };
+		D0C7073021363B9C00CD3EDA /* ChatBotModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatBotModel.m; sourceTree = "<group>"; };
+		D0C7073221363E5A00CD3EDA /* WYCChatBotViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYCChatBotViewController.h; sourceTree = "<group>"; };
+		D0C7073321363E5A00CD3EDA /* WYCChatBotViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYCChatBotViewController.m; sourceTree = "<group>"; };
+		FE15F11F9270F74B48D86ACE /* Pods-ChatBotTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatBotTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatBotTest/Pods-ChatBotTest.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0C706EB213598F000CD3EDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C70737213698A900CD3EDA /* iflyMSC.framework in Frameworks */,
+				D0C7071F21359A1100CD3EDA /* CoreLocation.framework in Frameworks */,
+				D0C7071D213599FB00CD3EDA /* libz.tbd in Frameworks */,
+				D0C7071B213599E600CD3EDA /* libc++.tbd in Frameworks */,
+				D0C70719213599D000CD3EDA /* CoreGraphics.framework in Frameworks */,
+				D0C70717213599C900CD3EDA /* QuartzCore.framework in Frameworks */,
+				D0C70715213599B800CD3EDA /* UIKit.framework in Frameworks */,
+				D0C70713213599AE00CD3EDA /* CoreTelephony.framework in Frameworks */,
+				D0C70711213599A600CD3EDA /* AudioToolbox.framework in Frameworks */,
+				D0C7070F2135998F00CD3EDA /* Foundation.framework in Frameworks */,
+				D0C7070D2135997F00CD3EDA /* SystemConfiguration.framework in Frameworks */,
+				D0C7070B2135997700CD3EDA /* AVFoundation.framework in Frameworks */,
+				DB375DE1D0AAF33209A46FBC /* libPods-ChatBotTest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E608D5DE7F03C4E649E9196 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07EA56CA43151E039B589844 /* Pods-XunFeAPITest.debug.xcconfig */,
+				5D41B2E443F68C1CBE2FC95B /* Pods-XunFeAPITest.release.xcconfig */,
+				FE15F11F9270F74B48D86ACE /* Pods-ChatBotTest.debug.xcconfig */,
+				A65B394B038B2ED7458D1065 /* Pods-ChatBotTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D0C706E5213598F000CD3EDA = {
+			isa = PBXGroup;
+			children = (
+				D0C706F0213598F000CD3EDA /* ChatBotTest */,
+				D0C706EF213598F000CD3EDA /* Products */,
+				D0C707072135994400CD3EDA /* Frameworks */,
+				0E608D5DE7F03C4E649E9196 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		D0C706EF213598F000CD3EDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0C706EE213598F000CD3EDA /* ChatBotTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0C706F0213598F000CD3EDA /* ChatBotTest */ = {
+			isa = PBXGroup;
+			children = (
+				D0C7072B21363B7400CD3EDA /* NetWork */,
+				D0C706F1213598F000CD3EDA /* AppDelegate.h */,
+				D0C706F2213598F000CD3EDA /* AppDelegate.m */,
+				D0C706F4213598F000CD3EDA /* ViewController.h */,
+				D0C706F5213598F000CD3EDA /* ViewController.m */,
+				D0C706F7213598F000CD3EDA /* Main.storyboard */,
+				D0C706FA213598F100CD3EDA /* Assets.xcassets */,
+				D0C706FC213598F100CD3EDA /* LaunchScreen.storyboard */,
+				D0C706FF213598F100CD3EDA /* Info.plist */,
+				D0C70700213598F100CD3EDA /* main.m */,
+				D0C7072221359C8900CD3EDA /* PrefixHeader.pch */,
+				D0C707232136234F00CD3EDA /* WYCIATViewController.h */,
+				D0C707242136234F00CD3EDA /* WYCIATViewController.m */,
+				D0C707282136291200CD3EDA /* WYCISRDataHelper.h */,
+				D0C707292136291200CD3EDA /* WYCISRDataHelper.m */,
+				D0C7072F21363B9C00CD3EDA /* ChatBotModel.h */,
+				D0C7073021363B9C00CD3EDA /* ChatBotModel.m */,
+				D0C7073221363E5A00CD3EDA /* WYCChatBotViewController.h */,
+				D0C7073321363E5A00CD3EDA /* WYCChatBotViewController.m */,
+			);
+			path = ChatBotTest;
+			sourceTree = "<group>";
+		};
+		D0C707072135994400CD3EDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0C7072021359B0100CD3EDA /* iflyMSC.framework */,
+				D0C7071E21359A1100CD3EDA /* CoreLocation.framework */,
+				D0C7071C213599FA00CD3EDA /* libz.tbd */,
+				D0C7071A213599E600CD3EDA /* libc++.tbd */,
+				D0C70718213599D000CD3EDA /* CoreGraphics.framework */,
+				D0C70716213599C900CD3EDA /* QuartzCore.framework */,
+				D0C70714213599B800CD3EDA /* UIKit.framework */,
+				D0C70712213599AE00CD3EDA /* CoreTelephony.framework */,
+				D0C70710213599A600CD3EDA /* AudioToolbox.framework */,
+				D0C7070E2135998E00CD3EDA /* Foundation.framework */,
+				D0C7070C2135997E00CD3EDA /* SystemConfiguration.framework */,
+				D0C7070A2135997700CD3EDA /* AVFoundation.framework */,
+				4209C666391402419E47232B /* libPods-ChatBotTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0C7072B21363B7400CD3EDA /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				D0C7072C21363B7400CD3EDA /* HttpClient.m */,
+				D0C7072D21363B7400CD3EDA /* HttpClient.h */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0C706ED213598F000CD3EDA /* ChatBotTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0C70704213598F100CD3EDA /* Build configuration list for PBXNativeTarget "ChatBotTest" */;
+			buildPhases = (
+				4588B123FAD49889DC5A5952 /* [CP] Check Pods Manifest.lock */,
+				D0C706EA213598F000CD3EDA /* Sources */,
+				D0C706EB213598F000CD3EDA /* Frameworks */,
+				D0C706EC213598F000CD3EDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChatBotTest;
+			productName = XunFeAPITest;
+			productReference = D0C706EE213598F000CD3EDA /* ChatBotTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0C706E6213598F000CD3EDA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = wyc;
+				TargetAttributes = {
+					D0C706ED213598F000CD3EDA = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = D0C706E9213598F000CD3EDA /* Build configuration list for PBXProject "ChatBotTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0C706E5213598F000CD3EDA;
+			productRefGroup = D0C706EF213598F000CD3EDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0C706ED213598F000CD3EDA /* ChatBotTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0C706EC213598F000CD3EDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C706FE213598F100CD3EDA /* LaunchScreen.storyboard in Resources */,
+				D0C706FB213598F100CD3EDA /* Assets.xcassets in Resources */,
+				D0C706F9213598F000CD3EDA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4588B123FAD49889DC5A5952 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatBotTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0C706EA213598F000CD3EDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C7072E21363B7400CD3EDA /* HttpClient.m in Sources */,
+				D0C7073521363E5A00CD3EDA /* WYCChatBotViewController.m in Sources */,
+				D0C7073121363B9C00CD3EDA /* ChatBotModel.m in Sources */,
+				D0C7072A2136291200CD3EDA /* WYCISRDataHelper.m in Sources */,
+				D0C706F6213598F000CD3EDA /* ViewController.m in Sources */,
+				D0C707262136234F00CD3EDA /* WYCIATViewController.m in Sources */,
+				D0C70701213598F100CD3EDA /* main.m in Sources */,
+				D0C706F3213598F000CD3EDA /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D0C706F7213598F000CD3EDA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0C706F8213598F000CD3EDA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0C706FC213598F100CD3EDA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0C706FD213598F100CD3EDA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0C70702213598F100CD3EDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0C70703213598F100CD3EDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0C70705213598F100CD3EDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE15F11F9270F74B48D86ACE /* Pods-ChatBotTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XunFeAPITest",
+					"$(PROJECT_DIR)/ChatBotTest",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ChatBotTest/PrefixHeader.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/ChatBotTest/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wyc.XunFeAPITest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0C70706213598F100CD3EDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A65B394B038B2ED7458D1065 /* Pods-ChatBotTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XunFeAPITest",
+					"$(PROJECT_DIR)/ChatBotTest",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ChatBotTest/PrefixHeader.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/ChatBotTest/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.wyc.XunFeAPITest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0C706E9213598F000CD3EDA /* Build configuration list for PBXProject "ChatBotTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C70702213598F100CD3EDA /* Debug */,
+				D0C70703213598F100CD3EDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0C70704213598F100CD3EDA /* Build configuration list for PBXNativeTarget "ChatBotTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C70705213598F100CD3EDA /* Debug */,
+				D0C70706213598F100CD3EDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0C706E6213598F000CD3EDA /* Project object */;
+}
