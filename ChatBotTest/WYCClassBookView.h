@@ -13,5 +13,5 @@
 //+(instancetype)initWithDic:
 -(void)initView:(BOOL)isFirst;
 -(void)addBar:(NSArray *)date isFirst:(BOOL)isFirst;
--(void)addBtn;
+-(void)addBtn:(NSArray *)array;
 @end

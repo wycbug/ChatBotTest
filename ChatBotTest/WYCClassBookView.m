@@ -58,8 +58,8 @@
     
     
     
- 
-   
+    
+    
     
     
     [_month mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -155,7 +155,7 @@
                 weekLabel.font = [UIFont systemFontOfSize:12];
                 weekLabel.textColor = [UIColor colorWithHexString:@"#7097FA"];
                 weekLabel.textAlignment = NSTextAlignmentCenter;
-                [weekLabel setFrame:CGRectMake(0, 0, dayItem.frame.size.width, dayItem.frame.size.height/2)];
+                [weekLabel setFrame:CGRectMake(0, dayItem.frame.size.height/2-11, dayItem.frame.size.width, 11)];
                 [dayItem addSubview:weekLabel];
                 //添加日期
                 UILabel *dayLabel = [[UILabel alloc]init];
@@ -198,10 +198,10 @@
             
         }
     }
-    _scrollView.contentSize = CGSizeMake(_scrollView.frame.size.width,670);
+    _scrollView.contentSize = CGSizeMake(_scrollView.frame.size.width,_leftBar.frame.size.height);
     
 }
--(void)addBtn{
+-(void)addBtn:(NSArray *)array{
     
     @autoreleasepool {
         [_dayBar layoutIfNeeded];
@@ -218,45 +218,54 @@
                 }else{
                     viewColor = [UIColor colorWithHexString:@"#81B6FE"];
                 }
-                 UIView *btnView = [[UIView alloc]init];
+                UIView *btnView = [[UIView alloc]init];
                 [btnView setFrame:CGRectMake(_leftBar.frame.size.width +  i*btnWidth, j*btnHeight, btnWidth, btnHeight)];
+                
                 UIButton *btn = [[UIButton alloc]init];
                 btn.layer.cornerRadius = 3.0 ;
-                btn.backgroundColor = viewColor;
-                [btn setFrame:CGRectMake(1, 1, btnWidth-2, btnHeight-2)];
                 
-                
-                UILabel *classRoomNumLabel = [[UILabel alloc]init];
-                [classRoomNumLabel setFrame:CGRectMake(0, btn.frame.size.height-20, btn.frame.size.width, 10)];
-                classRoomNumLabel.text = [NSString stringWithFormat:@"3201"];
-                classRoomNumLabel.textAlignment = NSTextAlignmentCenter;
-                classRoomNumLabel.textColor = [UIColor colorWithHexString:@"#FFFFFF"];
-                classRoomNumLabel.font = [UIFont systemFontOfSize:12];
-                
-                UILabel *classNameLabel = [[UILabel alloc]init];
-                CGFloat classNameLabelHeight = [self calculateRowHeight:@"大学英语2" fontSize:12 width:btn.frame.size.width - 10];
-                if (classNameLabelHeight > btn.frame.size.height-20) {
-                    classNameLabelHeight = btn.frame.size.height-20;
+                if ([[NSString stringWithFormat:@"%@",array[j][i]] isEqualToString:@""]) {
+                    btn.backgroundColor = [UIColor whiteColor];
+                    [btn setFrame:CGRectMake(1, 1, btnWidth-2, btnHeight-2)];
+                    [btnView addSubview:btn];
+                }else{
+                    
+                    btn.backgroundColor = viewColor;
+                    [btn setFrame:CGRectMake(1, 1, btnWidth-2, btnHeight-2)];
+                    
+                    
+                    UILabel *classRoomNumLabel = [[UILabel alloc]init];
+                    [classRoomNumLabel setFrame:CGRectMake(0, btn.frame.size.height-20, btn.frame.size.width, 10)];
+                    classRoomNumLabel.text = [NSString stringWithFormat:@"%@", [array[j][i] objectForKey:@"classroom"]];
+                   
+                    classRoomNumLabel.textAlignment = NSTextAlignmentCenter;
+                    classRoomNumLabel.textColor = [UIColor colorWithHexString:@"#FFFFFF"];
+                    classRoomNumLabel.font = [UIFont systemFontOfSize:12];
+                    
+                    UILabel *classNameLabel = [[UILabel alloc]init];
+                    CGFloat classNameLabelHeight = [self calculateRowHeight:[NSString stringWithFormat:@"%@", [array[j][i] objectForKey:@"course"]] fontSize:12 width:btn.frame.size.width - 10];
+                    if (classNameLabelHeight > btn.frame.size.height-20) {
+                        classNameLabelHeight = btn.frame.size.height-20;
+                    }
+                    
+                    [classNameLabel setFrame:CGRectMake(5, 9, btn.frame.size.width - 10, classNameLabelHeight)];
+                    classNameLabel.text = [NSString stringWithFormat:@"%@", [array[j][i] objectForKey:@"course"]];
+                    classNameLabel.textAlignment = NSTextAlignmentCenter;
+                    classNameLabel.textColor = [UIColor colorWithHexString:@"#FFFFFF"];
+                    classNameLabel.font = [UIFont systemFontOfSize:12];
+                    [classNameLabel setNumberOfLines:0];
+                    classNameLabel.lineBreakMode = NSLineBreakByWordWrapping;
+                    
+                    
+                    [btn addSubview:classRoomNumLabel];
+                    [btn addSubview:classNameLabel];
+                    [btnView addSubview:btn];
                 }
-                
-                [classNameLabel setFrame:CGRectMake(5, 9, btn.frame.size.width - 10, classNameLabelHeight)];
-                classNameLabel.text = [NSString stringWithFormat:@"大学英语2"];
-                classNameLabel.textAlignment = NSTextAlignmentCenter;
-                classNameLabel.textColor = [UIColor colorWithHexString:@"#FFFFFF"];
-                classNameLabel.font = [UIFont systemFontOfSize:12];
-                [classNameLabel setNumberOfLines:0];
-                classNameLabel.lineBreakMode = NSLineBreakByWordWrapping;
-                
-                
-                [btn addSubview:classRoomNumLabel];
-                [btn addSubview:classNameLabel];
-                [btnView addSubview:btn];
-                
                 [_scrollView addSubview:btnView];
                 
             }
         }
-       
+        
     }
     
     //NSLog(@"subcount:%lu",(unsigned long)_scrollView.subviews.count);
