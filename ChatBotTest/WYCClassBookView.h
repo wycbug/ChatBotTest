@@ -11,6 +11,7 @@
 @interface WYCClassBookView : UIView
 
 //+(instancetype)initWithDic:
--(void)initView;
--(void)addBar:(NSDictionary *)date;
+-(void)initView:(BOOL)isFirst;
+-(void)addBar:(NSArray *)date isFirst:(BOOL)isFirst;
+-(void)addBtn;
 @end

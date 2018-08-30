@@ -34,6 +34,7 @@
 		D0C707422136E46D00CD3EDA /* WYCClassBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C707412136E46D00CD3EDA /* WYCClassBookViewController.m */; };
 		D0C707452136F2AB00CD3EDA /* WYCClassBookView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C707442136F2AB00CD3EDA /* WYCClassBookView.m */; };
 		D0C707712137438F00CD3EDA /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C707702137438F00CD3EDA /* UIColor+Hex.m */; };
+		D0C70774213762E900CD3EDA /* DateModle.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C70773213762E900CD3EDA /* DateModle.m */; };
 		DB375DE1D0AAF33209A46FBC /* libPods-ChatBotTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4209C666391402419E47232B /* libPods-ChatBotTest.a */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,8 @@
 		D0C707442136F2AB00CD3EDA /* WYCClassBookView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYCClassBookView.m; sourceTree = "<group>"; };
 		D0C7076F2137438F00CD3EDA /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		D0C707702137438F00CD3EDA /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		D0C70772213762E900CD3EDA /* DateModle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateModle.h; sourceTree = "<group>"; };
+		D0C70773213762E900CD3EDA /* DateModle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateModle.m; sourceTree = "<group>"; };
 		FE15F11F9270F74B48D86ACE /* Pods-ChatBotTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatBotTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatBotTest/Pods-ChatBotTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +167,8 @@
 				D0C707412136E46D00CD3EDA /* WYCClassBookViewController.m */,
 				D0C707432136F2AB00CD3EDA /* WYCClassBookView.h */,
 				D0C707442136F2AB00CD3EDA /* WYCClassBookView.m */,
+				D0C70772213762E900CD3EDA /* DateModle.h */,
+				D0C70773213762E900CD3EDA /* DateModle.m */,
 			);
 			path = ChatBotTest;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				D0C707422136E46D00CD3EDA /* WYCClassBookViewController.m in Sources */,
 				D0C706F6213598F000CD3EDA /* ViewController.m in Sources */,
 				D0C707262136234F00CD3EDA /* WYCIATViewController.m in Sources */,
+				D0C70774213762E900CD3EDA /* DateModle.m in Sources */,
 				D0C7073F2136C22C00CD3EDA /* ClassBook.m in Sources */,
 				D0C70701213598F100CD3EDA /* main.m in Sources */,
 				D0C706F3213598F000CD3EDA /* AppDelegate.m in Sources */,
