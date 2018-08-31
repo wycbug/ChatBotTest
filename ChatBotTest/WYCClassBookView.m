@@ -185,7 +185,7 @@
     [_leftBar layoutIfNeeded];
     @autoreleasepool {
         CGFloat numLabelWidth = _leftBar.frame.size.width;
-        CGFloat numLabelHeight = 101/2;
+        CGFloat numLabelHeight = 101*autoSizeScaleY/2;
         for (int i = 0; i < 12; i++) {
             UILabel *numLabel = [[UILabel alloc]init];
             [numLabel setFrame:CGRectMake(0, i*numLabelHeight, numLabelWidth, numLabelHeight)];
@@ -207,7 +207,7 @@
         [_dayBar layoutIfNeeded];
         [_leftBar layoutIfNeeded];
         CGFloat btnWidth = _dayBar.frame.size.width/7;
-        CGFloat btnHeight = 101;
+        CGFloat btnHeight = 101*autoSizeScaleY;
         for (int i = 0; i < 7; i++) {
             for (int j = 0; j < 6; j++) {
                 UIColor *viewColor = [[UIColor alloc]init];

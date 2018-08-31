@@ -35,6 +35,12 @@
 		D0C707452136F2AB00CD3EDA /* WYCClassBookView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C707442136F2AB00CD3EDA /* WYCClassBookView.m */; };
 		D0C707712137438F00CD3EDA /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C707702137438F00CD3EDA /* UIColor+Hex.m */; };
 		D0C70774213762E900CD3EDA /* DateModle.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C70773213762E900CD3EDA /* DateModle.m */; };
+		D0C707962138411200CD3EDA /* 课表.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C707952138411200CD3EDA /* 课表.xcassets */; };
+		D0C70799213843FC00CD3EDA /* SegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C70798213843FC00CD3EDA /* SegmentView.m */; };
+		D0C707A121384A6900CD3EDA /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7079B21384A6900CD3EDA /* BaseTableViewController.m */; };
+		D0C707A221384A6900CD3EDA /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7079C21384A6900CD3EDA /* BaseViewController.m */; };
+		D0C707A321384A6900CD3EDA /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C7079D21384A6900CD3EDA /* BaseNavigationController.m */; };
+		D0C707A62138591000CD3EDA /* WYCScrollViewBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C707A52138591000CD3EDA /* WYCScrollViewBar.m */; };
 		DB375DE1D0AAF33209A46FBC /* libPods-ChatBotTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4209C666391402419E47232B /* libPods-ChatBotTest.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +90,17 @@
 		D0C707702137438F00CD3EDA /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		D0C70772213762E900CD3EDA /* DateModle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateModle.h; sourceTree = "<group>"; };
 		D0C70773213762E900CD3EDA /* DateModle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateModle.m; sourceTree = "<group>"; };
+		D0C707952138411200CD3EDA /* 课表.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "课表.xcassets"; sourceTree = "<group>"; };
+		D0C70797213843FC00CD3EDA /* SegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentView.h; sourceTree = "<group>"; };
+		D0C70798213843FC00CD3EDA /* SegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentView.m; sourceTree = "<group>"; };
+		D0C7079B21384A6900CD3EDA /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		D0C7079C21384A6900CD3EDA /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D0C7079D21384A6900CD3EDA /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		D0C7079E21384A6900CD3EDA /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		D0C7079F21384A6900CD3EDA /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		D0C707A021384A6900CD3EDA /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D0C707A42138591000CD3EDA /* WYCScrollViewBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WYCScrollViewBar.h; sourceTree = "<group>"; };
+		D0C707A52138591000CD3EDA /* WYCScrollViewBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WYCScrollViewBar.m; sourceTree = "<group>"; };
 		FE15F11F9270F74B48D86ACE /* Pods-ChatBotTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatBotTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatBotTest/Pods-ChatBotTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,8 +158,9 @@
 		D0C706F0213598F000CD3EDA /* ChatBotTest */ = {
 			isa = PBXGroup;
 			children = (
+				D0C7079A21384A6900CD3EDA /* Base */,
 				D0C7076E2137436500CD3EDA /* Categories */,
-				D0C7072B21363B7400CD3EDA /* NetWork */,
+				D0C7072B21363B7400CD3EDA /* Tool */,
 				D0C706F1213598F000CD3EDA /* AppDelegate.h */,
 				D0C706F2213598F000CD3EDA /* AppDelegate.m */,
 				D0C706F4213598F000CD3EDA /* ViewController.h */,
@@ -169,6 +187,9 @@
 				D0C707442136F2AB00CD3EDA /* WYCClassBookView.m */,
 				D0C70772213762E900CD3EDA /* DateModle.h */,
 				D0C70773213762E900CD3EDA /* DateModle.m */,
+				D0C707952138411200CD3EDA /* 课表.xcassets */,
+				D0C707A42138591000CD3EDA /* WYCScrollViewBar.h */,
+				D0C707A52138591000CD3EDA /* WYCScrollViewBar.m */,
 			);
 			path = ChatBotTest;
 			sourceTree = "<group>";
@@ -193,13 +214,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D0C7072B21363B7400CD3EDA /* NetWork */ = {
+		D0C7072B21363B7400CD3EDA /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				D0C70797213843FC00CD3EDA /* SegmentView.h */,
+				D0C70798213843FC00CD3EDA /* SegmentView.m */,
 				D0C7072C21363B7400CD3EDA /* HttpClient.m */,
 				D0C7072D21363B7400CD3EDA /* HttpClient.h */,
 			);
-			path = NetWork;
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		D0C7076E2137436500CD3EDA /* Categories */ = {
@@ -209,6 +232,19 @@
 				D0C707702137438F00CD3EDA /* UIColor+Hex.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		D0C7079A21384A6900CD3EDA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D0C7079F21384A6900CD3EDA /* BaseNavigationController.h */,
+				D0C7079D21384A6900CD3EDA /* BaseNavigationController.m */,
+				D0C7079E21384A6900CD3EDA /* BaseTableViewController.h */,
+				D0C7079B21384A6900CD3EDA /* BaseTableViewController.m */,
+				D0C707A021384A6900CD3EDA /* BaseViewController.h */,
+				D0C7079C21384A6900CD3EDA /* BaseViewController.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0C706FE213598F100CD3EDA /* LaunchScreen.storyboard in Resources */,
+				D0C707962138411200CD3EDA /* 课表.xcassets in Resources */,
 				D0C706FB213598F100CD3EDA /* Assets.xcassets in Resources */,
 				D0C706F9213598F000CD3EDA /* Main.storyboard in Resources */,
 			);
@@ -307,15 +344,20 @@
 				D0C707712137438F00CD3EDA /* UIColor+Hex.m in Sources */,
 				D0C707452136F2AB00CD3EDA /* WYCClassBookView.m in Sources */,
 				D0C7073521363E5A00CD3EDA /* WYCChatBotViewController.m in Sources */,
+				D0C707A121384A6900CD3EDA /* BaseTableViewController.m in Sources */,
 				D0C7073121363B9C00CD3EDA /* ChatBotModel.m in Sources */,
 				D0C7072A2136291200CD3EDA /* WYCISRDataHelper.m in Sources */,
 				D0C707422136E46D00CD3EDA /* WYCClassBookViewController.m in Sources */,
 				D0C706F6213598F000CD3EDA /* ViewController.m in Sources */,
+				D0C707A221384A6900CD3EDA /* BaseViewController.m in Sources */,
+				D0C70799213843FC00CD3EDA /* SegmentView.m in Sources */,
+				D0C707A321384A6900CD3EDA /* BaseNavigationController.m in Sources */,
 				D0C707262136234F00CD3EDA /* WYCIATViewController.m in Sources */,
 				D0C70774213762E900CD3EDA /* DateModle.m in Sources */,
 				D0C7073F2136C22C00CD3EDA /* ClassBook.m in Sources */,
 				D0C70701213598F100CD3EDA /* main.m in Sources */,
 				D0C706F3213598F000CD3EDA /* AppDelegate.m in Sources */,
+				D0C707A62138591000CD3EDA /* WYCScrollViewBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

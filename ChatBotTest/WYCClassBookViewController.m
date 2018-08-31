@@ -9,7 +9,9 @@
 #import "WYCClassBookViewController.h"
 #import "ClassBook.h"
 #import "DateModle.h"
+#import "SegmentView.h"
 #import "WYCClassBookView.h"
+#import "WYCScrollViewBar.h"
 
 #define DateStart @"2018-03-05"
 @interface WYCClassBookViewController ()<UIScrollViewDelegate>
@@ -17,28 +19,48 @@
 @property (strong, nonatomic) IBOutlet UIView *rootView;
 @property (nonatomic, strong) ClassBook *model;
 @property (nonatomic, assign) NSInteger index;
+@property (nonatomic, strong) NSArray *titleArray;
+@property (nonatomic, copy) NSString *titleText;
+@property (nonatomic, strong) UINavigationItem *navigationItem;
+@property (nonatomic, assign) BOOL hiddenScrollViewBar;
+@property (nonatomic, strong) WYCScrollViewBar *scrollViewBar;
 @end
 
 @implementation WYCClassBookViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _index = 0;
+    _hiddenScrollViewBar = YES;
+    
+    _titleArray = @[@"整学期",@"第一周",@"第二周",@"第三周",@"第四周",@"第五周",@"第六周",@"第七周",@"第八周",@"第九周",@"第十周",@"第十一周",@"第十二周",@"第十三周",@"第十四周",@"第十五周",@"第十六周",@"第十七周",@"第十八周",@"第十九周",@"第二十周",@"第二十一周",@"第二十二周",@"第二十三周",@"第二十四周",@"第二十五周"];
+    [self changeNavigationItemTitle];
+    _navigationItem = [[UINavigationItem alloc]init];
+    [self buildMyNavigationbar];
+    self.navigationItem = _navigationItem;
+    
+    _scrollViewBar = [[WYCScrollViewBar alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 39*autoSizeScaleY) andArray:_titleArray];
+    
+    _scrollViewBar.hidden = _hiddenScrollViewBar;
+    
+    [_rootView addSubview:_scrollViewBar];
+    
+   
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(DataLoadSuccessful)
                                                  name:[NSString stringWithFormat:@"%@DataLoadSuccess",self.title] object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(DataLoadFailure)
                                                  name:[NSString stringWithFormat:@"%@DataLoadFailure",self.title] object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateScrollViewOffSet)
+                                                 name:@"ScrollViewBarChanged" object:nil];
     if (!_model) {
         _model = [[ClassBook alloc]init];
         [_model getClassBookArray:@"2017210129" title:self.title];
     }
     
     
-    _scrollView.delegate = self;
-    _index = 0;
-    [self changeNavigationItem];
-    //NSLog(@"%@",date.dateArray[3]);
     
     // Do any additional setup after loading the view.
 }
@@ -54,8 +76,8 @@
     [date initCalculateDate:DateStart];
     
     
-    [_scrollView layoutIfNeeded];
     
+    [_scrollView layoutIfNeeded];
     WYCClassBookView *view = [[WYCClassBookView alloc]initWithFrame:CGRectMake(0*_scrollView.frame.size.width, 0, _scrollView.frame.size.width, _scrollView.frame.size.height)];
     [view initView:YES];
     [view addBtn:_model.classBookArray[0]];
@@ -71,14 +93,17 @@
             [view addBar:date.dateArray[i] isFirst:NO];
             [_scrollView addSubview:view];
         }
-        
-        [_scrollView layoutSubviews];
-        _scrollView.contentSize = CGSizeMake(date.dateArray.count * _scrollView.frame.size.width, 0);
-        _scrollView.pagingEnabled = YES;
     }
+    [_scrollView layoutSubviews];
+    _scrollView.contentSize = CGSizeMake(date.dateArray.count * _scrollView.frame.size.width, 0);
+    _scrollView.pagingEnabled = YES;
+    _scrollView.delegate = self;
+    
+    
     [_rootView addSubview:_scrollView];
+   
     [self.view addSubview:_rootView];
-
+    
     
     
 }
@@ -96,18 +121,93 @@
     }];
 }
 
-
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
     _index = (long)roundf(scrollView.contentOffset.x/_scrollView.frame.size.width);
+    NSLog(@"index:%ld",_index);
    // NSLog(@"index:%ld",(long)_index);
-    [self changeNavigationItem];
+    [self changeNavigationItemTitle];
+    [self buildMyNavigationbar];
+    [_scrollViewBar changeIndex:_index];
     
 }
 
--(void)changeNavigationItem{
-    NSArray *title = @[@"整学期",@"第一周",@"第二周",@"第三周",@"第四周",@"第五周",@"第六周",@"第七周",@"第八周",@"第九周",@"第十周",@"第十一周",@"第十二周",@"第十三周",@"第十四周",@"第十五周",@"第十六周",@"第十七周",@"第十八周",@"第十九周",@"第二十周",@"第二十一周",@"第二十二周",@"第二十三周",@"第二十四周",@"第二十五周"];
-    self.title = title[_index];
+-(void)changeNavigationItemTitle{
+    
+    _titleText = _titleArray[_index];
+    
 }
+- (void)buildMyNavigationbar{
+    
+    
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"加号"] style:UIBarButtonItemStylePlain target:self action:@selector(addNote)];
+    self.navigationItem.rightBarButtonItem = right;
+    
+    
+    UIView *titleView = [[UIView alloc]initWithFrame:CGRectMake(SCREENWIDTH/2-40, 0, 80, 40)];
+    titleView.backgroundColor = [UIColor clearColor];
+    UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(titleView.frame.size.width/2-30, 0, 60, titleView.frame.size.height)];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.text = _titleText;
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.font = [UIFont systemFontOfSize:18];
+    titleLabel.userInteractionEnabled = YES;
+    UIGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showSegmentView)];
+    [titleLabel addGestureRecognizer:tapGesture];
+    [titleView addSubview:titleLabel];
+    
+    
+    UIButton *detailBtn = [[UIButton alloc]initWithFrame:CGRectMake(titleView.frame.size.width/2+30, 0, 9, titleView.frame.size.height)];
+    //展开是下箭头，不展开是上箭头
+    if (_hiddenScrollViewBar) {
+        [detailBtn setImage:[UIImage imageNamed:@"下箭头"] forState:UIControlStateNormal];
+    }else{
+    [detailBtn setImage:[UIImage imageNamed:@"上箭头"] forState:UIControlStateNormal];
+    }
+    [detailBtn addTarget: self action:@selector(showSegmentView) forControlEvents:UIControlEventTouchUpInside];
+    [titleView addSubview: detailBtn];
+    
+    _navigationItem.titleView = titleView;
+}
+
+-(void)showSegmentView{
+    if (_hiddenScrollViewBar) {
+        _hiddenScrollViewBar = NO;
+        _scrollViewBar.hidden = _hiddenScrollViewBar;
+        [self buildMyNavigationbar];
+        [self updateScrollViewFame];
+        
+    }else{
+        _hiddenScrollViewBar = YES;
+        _scrollViewBar.hidden = _hiddenScrollViewBar;
+        [self buildMyNavigationbar];
+         [self updateScrollViewFame];
+    }
+    
+}
+-(void)updateScrollViewFame{
+    if (_hiddenScrollViewBar) {
+        [_scrollView setFrame:CGRectMake(0, 0, _rootView.frame.size.width, _rootView.frame.size.height)];
+    }else{
+        [_scrollView setFrame:CGRectMake(0, _scrollViewBar.frame.size.height, _rootView.frame.size.width, _rootView.frame.size.height - _scrollViewBar.frame.size.height)];
+    }
+}
+-(void)updateScrollViewOffSet{
+    _index = _scrollViewBar.index;
+    [UIView animateWithDuration:0.2f animations:^{
+        self->_scrollView.contentOffset = CGPointMake(self->_index*self->_scrollView.frame.size.width,0);
+    } completion:nil];
+   
+}
+-(void)addNote{
+    
+    _scrollViewBar.index = _scrollViewBar.index + 1;
+    NSLog(@"barindex:%ld",_scrollViewBar.index);
+    [_scrollViewBar changeIndex:_index];
+}
+
+
 /*
  #pragma mark - Navigation
  
