@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface WYCClassBookView : UIView
-
-//+(instancetype)initWithDic:
+@property (nonatomic, strong) UIScrollView *scrollView;
 -(void)initView:(BOOL)isFirst;
 -(void)addBar:(NSArray *)date isFirst:(BOOL)isFirst;
 -(void)addBtn:(NSArray *)array;
+-(void)chackBigLesson;
+-(void)changeScrollViewContentSize:(CGSize)contentSize;
 @end

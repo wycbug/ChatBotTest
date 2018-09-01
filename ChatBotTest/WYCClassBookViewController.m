@@ -43,7 +43,7 @@
     
     _scrollViewBar.hidden = _hiddenScrollViewBar;
     
-    [_rootView addSubview:_scrollViewBar];
+    [self.view addSubview:_scrollViewBar];
     
    
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -80,17 +80,19 @@
     [_scrollView layoutIfNeeded];
     WYCClassBookView *view = [[WYCClassBookView alloc]initWithFrame:CGRectMake(0*_scrollView.frame.size.width, 0, _scrollView.frame.size.width, _scrollView.frame.size.height)];
     [view initView:YES];
-    [view addBtn:_model.classBookArray[0]];
     NSArray *dateArray = @[];
     [view addBar:dateArray isFirst:YES];
+    [view addBtn:_model.classBookArray[0]];
+    [view chackBigLesson];
     [_scrollView addSubview:view];
     
     @autoreleasepool {
         for (int i = 0; i < date.dateArray.count; i++) {
             WYCClassBookView *view = [[WYCClassBookView alloc]initWithFrame:CGRectMake((i+1)*_scrollView.frame.size.width, 0, _scrollView.frame.size.width, _scrollView.frame.size.height)];
             [view initView:NO];
-            [view addBtn:_model.classBookArray[i]];
             [view addBar:date.dateArray[i] isFirst:NO];
+            [view addBtn:_model.classBookArray[i]];
+            [view chackBigLesson];
             [_scrollView addSubview:view];
         }
     }
@@ -188,9 +190,25 @@
 }
 -(void)updateScrollViewFame{
     if (_hiddenScrollViewBar) {
-        [_scrollView setFrame:CGRectMake(0, 0, _rootView.frame.size.width, _rootView.frame.size.height)];
+        [_rootView setFrame:CGRectMake(0, 0, _rootView.frame.size.width, _rootView.frame.size.height)];
+        [_rootView layoutIfNeeded];
+        [_rootView layoutSubviews];
+        for (int i = 0; i < _scrollView.subviews.count; i++) {
+            WYCClassBookView *view = _scrollView.subviews[i];
+            [view changeScrollViewContentSize:CGSizeMake(0, 606*autoSizeScaleY)];
+            [view layoutIfNeeded];
+            [view layoutSubviews];
+        }
     }else{
-        [_scrollView setFrame:CGRectMake(0, _scrollViewBar.frame.size.height, _rootView.frame.size.width, _rootView.frame.size.height - _scrollViewBar.frame.size.height)];
+        [_rootView setFrame:CGRectMake(0, _scrollViewBar.frame.size.height, _rootView.frame.size.width, _rootView.frame.size.height)];
+        [_rootView layoutIfNeeded];
+        [_rootView layoutSubviews];
+        for (int i = 0; i < _scrollView.subviews.count; i++) {
+            WYCClassBookView *view = _scrollView.subviews[i];
+            [view changeScrollViewContentSize:CGSizeMake(0, 606*autoSizeScaleY + _scrollViewBar.frame.size.height)];
+            [view layoutIfNeeded];
+            [view layoutSubviews];
+        }
     }
 }
 -(void)updateScrollViewOffSet{

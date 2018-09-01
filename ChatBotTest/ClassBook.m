@@ -25,6 +25,7 @@
         //NSLog(@"%@Modle连接成功",title);
         NSArray *array = [responseObject objectForKey:@"data"];
         self->_classBookArray = [[NSMutableArray alloc]init];
+        //[self->_classBookArray addObject:array];
         [self transform:array];
         //NSLog(@"classbookArray:%@",array);
         self->_nowWeek = [responseObject objectForKey:@"nowWeek"];
